@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.Game-info {
+    width: 700px;
+    height: 80px;
+    background-color: coral;
+    border: 4px solid seagreen;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.game-container {
+    width: 600px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.game-container.finish {
+    pointer-events: none;
+}
+
+.game-container .X-O {
+    position: relative;
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    border: 4px solid seagreen;
+    cursor: pointer;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.X-O:hover {
+    background-color: black;
+}
+
+.game-container .X-O .X {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-container .X-O .O {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-container .X-O.X::after {
+    content: "X";
+    position: absolute;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container .X-O.O::after {
+    content: "o";
+    position: absolute;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
